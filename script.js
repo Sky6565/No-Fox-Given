@@ -1,17 +1,68 @@
 //Random Quote Generator 
-const quoteContainer = document.getElementById('quote-container');
-const apiUrl = '';
+const quoteContainer = document.getElementById('quote-box');
+const apiUrl = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 
-function getRandomQuote() {
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      quoteContainer.textContent = data.content;
-    })
-    .catch(error => {
-      console.log('Error:', error);
-    });
+// function getRandomQuote() {
+//   fetch(apiUrl)
+//     .then(response => response.json())
+//     .then(data => {
+//       quoteContainer.textContent = data.content;
+//     })
+//     .catch(error => {
+//       console.log('Error:', error);
+//     });
+// }
+
+function randomQuote() {
+  var randomQuoteApi = 'https://api.api-ninjas.com/v1/quotes?category=inspirational';
+  fetch(getQuote, {
+    headers: {
+      'X-Api-Key': "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO"
+    }
+  })
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+  });
 }
+
+  // fetch(randomQuoteApi)
+  //   .then(function (response) {
+  //     return response.json();
+  //   })
+  //   .then(function (data) {
+  //     console.log(data);
+  //     var getQuoteImage = data.image;
+  //     var randomQuoteImage = document.createElement('img');
+  //     randomQuoteImage.src = getQuoteImage;
+  //     var imageContainer = document.createElement('div');
+  //     imageContainer.appendChild(randomQuoteImage);
+  //     quoteContainer.appendChild(imageContainer);
+  //   });
+  // }
+
+  randomQuote(); 
+
+  function randomPicture() {
+    var randomFoxApi = 'https://randomfox.ca/floof';
+    fetch(randomFoxApi)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        console.log(data);
+        var getFoxImage = data.image;
+        var randomFoxImage = document.createElement('img');
+        randomFoxImage.src = getFoxImage;
+        var imageContainer = document.createElement('div');
+        imageContainer.appendChild(randomFoxImage);
+        quoteContainer.appendChild(imageContainer);
+      });
+    }
+  
+    randomPicture(); 
 
 generateBtn.addEventListener('click', getRandomQuote);
 
@@ -82,3 +133,20 @@ submitButton.addEventListener('click', () => {
     console.log('Please select a mood');
   }
 });
+
+// function randomPicture() {
+//   var randomFoxApi = 'https://randomfox.ca/floof';
+//   fetch(randomFoxApi)
+//     .then(function (response) {
+//       return response.json();
+//     })
+//     .then(function (data) {
+//       console.log(data);
+//       var getFoxImage = data.image;
+//       var randomFoxImage = document.createElement('img');
+//       randomFoxImage.src = getFoxImage;
+//       var imageContainer = document.createElement('div');
+//       imageContainer.appendChild(randomFoxImage);
+//       quoteContainer.appendChild(imageContainer);
+//     });
+//   }
