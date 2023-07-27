@@ -13,56 +13,51 @@ const apiUrl = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 //     });
 // }
 
-function randomQuote() {
-  var randomQuoteApi = 'https://api.api-ninjas.com/v1/quotes?category=inspirational';
+function inspirationalQuote() {
+
+  var getQuote = 'https://api.api-ninjas.com/v1/quotes?category=inspirational';
+
   fetch(getQuote, {
-    headers: {
-      'X-Api-Key': "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO"
-    }
-  })
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
+      headers: {
+        'X-Api-Key': "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO"
+      }
+    })
+
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data)
+      var quoteData = data[0].quote;
+      var randomQuote = document.createElement('span');
+      randomQuote.textContent = quoteData;
+      quoteContainer.innerHTML = '';
+      quoteContainer.appendChild(randomQuote)
+
+    });
 }
 
-  // fetch(randomQuoteApi)
-  //   .then(function (response) {
-  //     return response.json();
-  //   })
-  //   .then(function (data) {
-  //     console.log(data);
-  //     var getQuoteImage = data.image;
-  //     var randomQuoteImage = document.createElement('img');
-  //     randomQuoteImage.src = getQuoteImage;
-  //     var imageContainer = document.createElement('div');
-  //     imageContainer.appendChild(randomQuoteImage);
-  //     quoteContainer.appendChild(imageContainer);
-  //   });
-  // }
+inspirationalQuote();
 
-  randomQuote(); 
+function randomPicture() {
+  var randomFoxApi = 'https://randomfox.ca/floof';
+  fetch(randomFoxApi)
+    .then(function (response) {
+      return response.json();
+    })
 
-  function randomPicture() {
-    var randomFoxApi = 'https://randomfox.ca/floof';
-    fetch(randomFoxApi)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-        var getFoxImage = data.image;
-        var randomFoxImage = document.createElement('img');
-        randomFoxImage.src = getFoxImage;
-        var imageContainer = document.createElement('div');
-        imageContainer.appendChild(randomFoxImage);
-        quoteContainer.appendChild(imageContainer);
-      });
-    }
-  
-    randomPicture(); 
+    .then(function (data) {
+      console.log(data);
+      var getFoxImage = data.image;
+      var randomFoxImage = document.createElement('img');
+      randomFoxImage.src = getFoxImage;
+      var imageContainer = document.createElement('div');
+      imageContainer.appendChild(randomFoxImage);
+      quoteContainer.appendChild(imageContainer);
+    });
+}
+
+randomPicture();
 
 generateBtn.addEventListener('click', getRandomQuote);
 
@@ -87,24 +82,24 @@ tuesdayEntry.addEventListener('input', () => {
 });
 
 wednesdayEntry.addEventListener('input', () => {
-    localStorage.setItem('tuesdayEntry', wednesdayEntry.value);
-  });
+  localStorage.setItem('tuesdayEntry', wednesdayEntry.value);
+});
 
 thursdayEntry.addEventListener('input', () => {
-    localStorage.setItem('tuesdayEntry', thursdayEntry.value);
-  });
+  localStorage.setItem('tuesdayEntry', thursdayEntry.value);
+});
 
 fridayEntry.addEventListener('input', () => {
-    localStorage.setItem('tuesdayEntry', fridayEntry.value);
-  });
+  localStorage.setItem('tuesdayEntry', fridayEntry.value);
+});
 
 saturdayEntry.addEventListener('input', () => {
-    localStorage.setItem('tuesdayEntry', saturdayEntry.value);
-  });
+  localStorage.setItem('tuesdayEntry', saturdayEntry.value);
+});
 
 sundayEntry.addEventListener('input', () => {
-    localStorage.setItem('tuesdayEntry', sundayEntry.value);
-  });
+  localStorage.setItem('tuesdayEntry', sundayEntry.value);
+});
 
 // Retrieve journal entries from localStorage and populate the textareas
 window.addEventListener('DOMContentLoaded', () => {
@@ -124,7 +119,7 @@ const submitButton = document.getElementById('submit-button');
 //Mood Event listeners
 submitButton.addEventListener('click', () => {
   const selectedMood = document.querySelector('input[name="mood"]:checked');
-  
+
   if (selectedMood) {
     const moodValue = selectedMood.value;
     // Save the mood value or perform desired actions
@@ -134,19 +129,4 @@ submitButton.addEventListener('click', () => {
   }
 });
 
-// function randomPicture() {
-//   var randomFoxApi = 'https://randomfox.ca/floof';
-//   fetch(randomFoxApi)
-//     .then(function (response) {
-//       return response.json();
-//     })
-//     .then(function (data) {
-//       console.log(data);
-//       var getFoxImage = data.image;
-//       var randomFoxImage = document.createElement('img');
-//       randomFoxImage.src = getFoxImage;
-//       var imageContainer = document.createElement('div');
-//       imageContainer.appendChild(randomFoxImage);
-//       quoteContainer.appendChild(imageContainer);
-//     });
-//   }
+
