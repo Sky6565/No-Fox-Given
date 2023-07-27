@@ -1,38 +1,87 @@
-<!DOCTYPE html> 
-<html> 
-    <header>Daily Journal</header>
-    <link rel="stylesheet" href="style.css">
-</html>
 
-<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+  
+      <header class="box" style=" width: 200px">
+        <h1 class="title is-5"><strong>Daily Journal</strong></h1>
+      </header>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Entrees</strong>
+            </a>
+            <a class="button is-primary">
+              <strong>About</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+    </nav>
+    <br>
+    <br>
+<div class="columns">
+  <div class="column is-half" >
     <div class="day-section">
         <h2>Monday</h2>
-        <textarea id="monday-entry"></textarea>
+        <textarea id="monday-entry" placeholder="How was your Day">
+        </textarea>
+        <button id="txtBtn">Save</button>
     </div>
     <div class="day-section">
-        <h3>Tuesday</h3>
-        <textarea id="tuesday-entry"></textarea>
+        <h2>Tuesday</h2>
+        <textarea id="tuesday-entry" placeholder="How was your day?"></textarea>
+        <button id="txtBtn">Save</button>
     </div>
     <div class="day-section">
         <h4>Wednesday</h4>
-        <textarea id="wednesday-entry"></textarea>
+        <textarea id="wednesday-entry" placeholder="How was your Day"></textarea>
+        <button id="txtBtn">Save</button>
     </div>
+  </div>
+  <div class="column is-half">
     <div class="day-section">
-        <h5>Thursday</h5>
-        <textarea id="thursday-entry"></textarea>
-    </div>
-    <div class="day-section">
-        <h6>Friday</h6>
-        <textarea id="friday-entry"></textarea>
-    </div>
-    <div class="day-section">
-        <h7>Saturday</h7>
-        <textarea id="saturday-entry"></textarea>
-    </div>
-    <div class="sunday-section">
-        <h8>Sunday</h8>
-        <textarea id="sunday-entry"></textarea>
-    </div>
+    <h2>Thursday</h2>
+    <textarea id="thursday-entry" placeholder="How was your Day"></textarea>
+    <button id="txtBtn">Save</button>
+  </div>
+  <div class="day-section">
+    <h2>Friday</h2>
+    <textarea id="friday-entry" placeholder="How was your Day"></textarea>
+    <button>Save</button>
+  </div>
+  <div class="day-section">
+    <h2>Saturday</h2>
+    <textarea id="saturday-entry" placeholder="How was your Day"></textarea>
+    <button id="txtBtn">Save</button>
+  </div>
+  <div class="sunday-section">
+    <h2>Sunday</h2>
+    <textarea id="sunday-entry" placeholder="How was your Day"></textarea>
+    <button id="txtBtn">Save</button>
+  </div>
+</div>
+</div>
 
     <div class="mood-tracker">
         <h9>Mood Tracker</h9>
