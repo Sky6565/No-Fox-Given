@@ -64,9 +64,23 @@
     font-weight: bold;
     text-align: center;
   }
-
-
-
  
-  
+  #quote-box {
+      width: 100%;
+      /* Takes up all available width */
+      min-height: 200px;
+      /* Minimum height */
+      padding: 10px;
+      /* Padding inside textarea */
+      border: 1px solid #dddddd;
+      /* Border around textarea */
+      resize: vertical;
+      /* Allows the textarea to only be resizable vertically */
+      background: url(https://i.stack.imgur.com/ynxjD.png) repeat-y;
+        width: 30%;
+            /* Roughly one third width minus some for gaps */
+            padding: 20px;
+            background-color: bisque;
+            border: 10px solid #dddddd;
+  }
   

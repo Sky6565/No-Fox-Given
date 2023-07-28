@@ -1,6 +1,7 @@
-//Random Quote Generator 
-const quoteContainer = document.getElementById('quote-box');
+//Random Quote Generator
+const quoteContainer = document.getElementById("quote-box");
 const apiUrl = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
+const popUp = document.getElementById("modal-card-body");
 
 // function getRandomQuote() {
 //   fetch(apiUrl)
@@ -14,33 +15,30 @@ const apiUrl = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 // }
 
 function inspirationalQuote() {
-
-  var getQuote = 'https://api.api-ninjas.com/v1/quotes?category=inspirational';
+  var getQuote = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 
   fetch(getQuote, {
-      headers: {
-        'X-Api-Key': "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO"
-      }
-    })
-
+    headers: {
+      "X-Api-Key": "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO",
+    },
+  })
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data)
+      console.log(data);
       var quoteData = data[0].quote;
-      var randomQuote = document.createElement('span');
+      var randomQuote = document.createElement("span");
       randomQuote.textContent = quoteData;
-      quoteContainer.innerHTML = '';
-      quoteContainer.appendChild(randomQuote)
-
+      quoteContainer.innerHTML = "";
+      quoteContainer.appendChild(randomQuote);
     });
 }
 
 inspirationalQuote();
 
 function randomPicture() {
-  var randomFoxApi = 'https://randomfox.ca/floof';
+  var randomFoxApi = "https://randomfox.ca/floof";
   fetch(randomFoxApi)
     .then(function (response) {
       return response.json();
@@ -49,75 +47,73 @@ function randomPicture() {
     .then(function (data) {
       console.log(data);
       var getFoxImage = data.image;
-      var randomFoxImage = document.createElement('img');
+      var randomFoxImage = document.createElement("img");
       randomFoxImage.src = getFoxImage;
-      var imageContainer = document.createElement('div');
+      var imageContainer = document.createElement("div");
       imageContainer.appendChild(randomFoxImage);
-      quoteContainer.appendChild(imageContainer);
+      popUp.appendChild(imageContainer);
     });
 }
 
 randomPicture();
 
-generateBtn.addEventListener('click', getRandomQuote);
+generateBtn.addEventListener("click", getRandomQuote);
 
+//Weekly Journal Entries
+const mondayEntry = document.getElementById("monday-entry");
+const tuesdayEntry = document.getElementById("tuesday-entry");
+const wednesdayEntry = document.getElementById("wednesday-entry");
+const thursdayEntry = document.getElementById("thursday-entry");
+const fridayEntry = document.getElementById("friday-entry");
+const saturdayEntry = document.getElementById("saturday-entry");
+const sundayEntry = document.getElementById("sunday-entry");
 
-//Weekly Journal Entries 
-const mondayEntry = document.getElementById('monday-entry');
-const tuesdayEntry = document.getElementById('tuesday-entry');
-const wednesdayEntry = document.getElementById('wednesday-entry');
-const thursdayEntry = document.getElementById('thursday-entry');
-const fridayEntry = document.getElementById('friday-entry');
-const saturdayEntry = document.getElementById('saturday-entry');
-const sundayEntry = document.getElementById('sunday-entry');
-
-
-// Saving journal entries to localStorage 
-mondayEntry.addEventListener('input', () => {
-  localStorage.setItem('mondayEntry', mondayEntry.value);
+// Saving journal entries to localStorage
+mondayEntry.addEventListener("input", () => {
+  localStorage.setItem("mondayEntry", mondayEntry.value);
 });
 
-tuesdayEntry.addEventListener('input', () => {
-  localStorage.setItem('tuesdayEntry', tuesdayEntry.value);
+tuesdayEntry.addEventListener("input", () => {
+  localStorage.setItem("tuesdayEntry", tuesdayEntry.value);
 });
 
-wednesdayEntry.addEventListener('input', () => {
-  localStorage.setItem('tuesdayEntry', wednesdayEntry.value);
+wednesdayEntry.addEventListener("input", () => {
+  localStorage.setItem("wednesdayEntry", wednesdayEntry.value);
 });
 
-thursdayEntry.addEventListener('input', () => {
-  localStorage.setItem('tuesdayEntry', thursdayEntry.value);
+thursdayEntry.addEventListener("input", () => {
+  localStorage.setItem("thursdayEntry", thursdayEntry.value);
 });
 
-fridayEntry.addEventListener('input', () => {
-  localStorage.setItem('tuesdayEntry', fridayEntry.value);
+fridayEntry.addEventListener("input", () => {
+  localStorage.setItem("fridayEntry", fridayEntry.value);
 });
 
-saturdayEntry.addEventListener('input', () => {
-  localStorage.setItem('tuesdayEntry', saturdayEntry.value);
+saturdayEntry.addEventListener("input", () => {
+  localStorage.setItem("saturdayEntry", saturdayEntry.value);
 });
 
-sundayEntry.addEventListener('input', () => {
-  localStorage.setItem('tuesdayEntry', sundayEntry.value);
+sundayEntry.addEventListener("input", () => {
+  localStorage.setItem("sundayEntry", sundayEntry.value);
 });
 
 // Retrieve journal entries from localStorage and populate the textareas
-window.addEventListener('DOMContentLoaded', () => {
-  mondayEntry.value = localStorage.getItem('mondayEntry') || '';
-  tuesdayEntry.value = localStorage.getItem('tuesdayEntry') || '';
-  wednesdayEntry.value = localStorage.getItem('wednesdayEntry') || '';
-  thursdayEntry.value = localStorage.getItem('thursdayEntry') || '';
-  fridayEntry.value = localStorage.getItem('fridayEntry') || '';
-  saturdayEntry.value = localStorage.getItem('saturdayEntry') || '';
-  sundayEntry.value = localStorage.getItem('sundayEntry') || '';
+window.addEventListener("DOMContentLoaded", () => {
+  mondayEntry.value = localStorage.getItem("mondayEntry") || "";
+  tuesdayEntry.value = localStorage.getItem("tuesdayEntry") || "";
+  wednesdayEntry.value = localStorage.getItem("wednesdayEntry") || "";
+  thursdayEntry.value = localStorage.getItem("thursdayEntry") || "";
+  fridayEntry.value = localStorage.getItem("fridayEntry") || "";
+  saturdayEntry.value = localStorage.getItem("saturdayEntry") || "";
+  sundayEntry.value = localStorage.getItem("sundayEntry") || "";
 });
 
 //Mood Button
 const moodRadioButtons = document.querySelectorAll('input[type="radio"]');
-const submitButton = document.getElementById('submit-button');
+const submitButton = document.getElementById("submit-button");
 
 //Mood Event listeners
-submitButton.addEventListener('click', () => {
+submitButton.addEventListener("click", () => {
   const selectedMood = document.querySelector('input[name="mood"]:checked');
 
   if (selectedMood) {
@@ -125,8 +121,6 @@ submitButton.addEventListener('click', () => {
     // Save the mood value or perform desired actions
     console.log(`Selected mood: ${moodValue}`);
   } else {
-    console.log('Please select a mood');
+    console.log("Please select a mood");
   }
 });
-
-
