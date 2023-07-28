@@ -11,7 +11,7 @@
   </head>
   
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+   <nav class="navbar" role="navigation" aria-label="main navigation">
   
       <header class="box" style=" width: 200px">
         <h1 class="title is-5"><strong>Daily Journal</strong></h1>
@@ -28,6 +28,8 @@
           <div class="buttons">
             <a class="button is-primary">
               <strong>Entrees</strong>
+              <div>
+               </div> 
             </a>
             <a class="button is-primary">
               <strong>About</strong>
@@ -38,81 +40,69 @@
       </div>
     </nav>
     </nav>
-    <br>
-    <br>
-<div class="columns">
-  <div class="column is-half" >
-    <div class="day-section">
-        <h2>Monday</h2>
-        <textarea id="monday-entry" placeholder="How was your Day">
-        </textarea>
-        <button id="txtBtn">Save</button>
-    </div>
-    <div class="day-section">
-        <h2>Tuesday</h2>
-        <textarea id="tuesday-entry" placeholder="How was your day?"></textarea>
-        <button id="txtBtn">Save</button>
-    </div>
-    <div class="day-section">
-        <h4>Wednesday</h4>
-        <textarea id="wednesday-entry" placeholder="How was your Day"></textarea>
-        <button id="txtBtn">Save</button>
-    </div>
-  </div>
-  <div class="column is-half">
-    <div class="day-section">
-    <h2>Thursday</h2>
-    <textarea id="thursday-entry" placeholder="How was your Day"></textarea>
-    <button id="txtBtn">Save</button>
-  </div>
-  <div class="day-section">
-    <h2>Friday</h2>
-    <textarea id="friday-entry" placeholder="How was your Day"></textarea>
-    <button>Save</button>
-  </div>
-  <div class="day-section">
-    <h2>Saturday</h2>
-    <textarea id="saturday-entry" placeholder="How was your Day"></textarea>
-    <button id="txtBtn">Save</button>
-  </div>
-  <div class="sunday-section">
-    <h2>Sunday</h2>
-    <textarea id="sunday-entry" placeholder="How was your Day"></textarea>
-    <button id="txtBtn">Save</button>
-  </div>
-</div>
-</div>
-
-    <div class="mood-tracker">
-        <h9>Mood Tracker</h9>
-        <label>
-          <input type="radio" name="mood" value="happy">
-          Happy
-        </label>
-        <label>
-          <input type="radio" name="mood" value="mellow">
-          Mellow
-        </label>
-        <label>
-          <input type="radio" name="mood" value="stressed">
-          Stressed
-        </label>
-        <label>
-          <input type="radio" name="mood" value="sad">
-          Sad 
-        </label>
-        <lable>
-          <input type="radio" name="mood" value="frustrated">
-          Frustrated
-        </lable>
-        <button id="submit-button">Submit</button>
-      </div>
-
-      <div id="quote-box">
-        <h10>Inspirational Quote</h10>
-        <p id="quote"></p>
-      </div>
-
-    <script src=script.js></script> 
+   
     
+
+
+    <div class="container">
+      <div class="row">
+        <div class="day-section">
+          <h2>Monday</h2>
+          <textarea id="monday-entry" placeholder="How was your Day">
+          </textarea>
+          <button id="save-btn">Save</button>
+        </div>
+        <div class="day-section">
+          <h2>Tuesday</h2>
+          <textarea id="tuesday-entry" placeholder="How was your Day">
+          </textarea>
+          <button id="save-btn">Save</button>
+        </div>
+        <div class="day-section">
+          <h2>Wednesday</h2>
+        <textarea id="wednesday-entry" placeholder="How was your Day">
+        </textarea>
+        <button id="save-btn">Save</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="day-section">
+          <h2>Thursday</h2>
+        <textarea id="thursday-entry" placeholder="How was your Day">
+        </textarea>
+        <button id="save-btn">Save</button>
+        </div>
+        <div class="day-section">
+          <h2>Friday</h2>
+        <textarea id="friday-entry" placeholder="How was your Day">
+        </textarea>
+        <button id="save-btn">Save</button>
+        </div>
+        <div class="day-section">
+          <h2>Saturday</h2>
+          <textarea id="saturday-entry" placeholder="How was your Day">
+          </textarea>
+          <button id="save-btn">Save</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="day-section">
+          <h2>Sunday</h2>
+        <textarea id="sunday-entry" placeholder="How was your Day">
+        </textarea>
+        <button id="save-btn">Save</button>
+        </div>
+      </div>
+    </div>
+    
+    <script src=script.js></script>  
 </body>
+
+
+
+
+
+
+
+
+
