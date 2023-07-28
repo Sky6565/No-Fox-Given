@@ -1,147 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
 
-  <!DOCTYPE html>
-  <html lang="en">
-  
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Journal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  
-  <body>
-   <nav class="navbar" role="navigation" aria-label="main navigation">
-  
-      <header class="box" style=" width: 200px">
-        <h1 class="title is-5"><strong>Daily Journal</strong></h1>
-      </header>
-  
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-      </div>
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Entrees</strong>
-              <div>
-               </div> 
-            </a>
-            <a class="button is-primary">
-              <strong>About</strong>
-            </a>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Journal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+
+    <header class="box" style=" width: 200px">
+      <h1 class="title is-5"><strong>Daily Journal</strong></h1>
+    </header>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Entrees</strong>
+            <div>
+            </div>
+          </a>
+          <a class="button is-primary">
+            <strong>About</strong>
+          </a>
         </div>
       </div>
-      </div>
-    </nav>
-    </nav>
-   
-    
+    </div>
+    </div>
+  </nav>
+  </nav>
 
 
-    <div class="container">
-      <div class="row">
-        <div class="day-section">
-          <h2>Monday</h2>
-          <textarea id="monday-entry" placeholder="How was your Day">
+  <div class="container">
+    <div class="row">
+      <div class="day-section">
+        <h2>Monday</h2>
+        <textarea id="monday-entry" placeholder="How was your Day">
           </textarea>
-          <button id="save-btn">Save</button>
-        </div>
-        <div class="day-section">
-          <h2>Tuesday</h2>
-          <textarea id="tuesday-entry" placeholder="How was your Day">
+        <button id="save-btn">Save</button>
+      </div>
+      <div class="day-section">
+        <h2>Tuesday</h2>
+        <textarea id="tuesday-entry" placeholder="How was your Day">
           </textarea>
-          <button id="save-btn">Save</button>
-        </div>
-        <div class="day-section">
-          <h2>Wednesday</h2>
+        <button id="save-btn">Save</button>
+      </div>
+      <div class="day-section">
+        <h2>Wednesday</h2>
         <textarea id="wednesday-entry" placeholder="How was your Day">
         </textarea>
         <button id="save-btn">Save</button>
-        </div>
       </div>
-      <div class="row">
-        <div class="day-section">
-          <h2>Thursday</h2>
+    </div>
+    <div class="row">
+      <div class="day-section">
+        <h2>Thursday</h2>
         <textarea id="thursday-entry" placeholder="How was your Day">
         </textarea>
         <button id="save-btn">Save</button>
-        </div>
-        <div class="day-section">
-          <h2>Friday</h2>
+      </div>
+      <div class="day-section">
+        <h2>Friday</h2>
         <textarea id="friday-entry" placeholder="How was your Day">
         </textarea>
         <button id="save-btn">Save</button>
-        </div>
-        <div class="day-section">
-          <h2>Saturday</h2>
-          <textarea id="saturday-entry" placeholder="How was your Day">
-          </textarea>
-          <button id="save-btn">Save</button>
-        </div>
       </div>
-      <div class="row">
-        <div class="day-section">
-          <h2>Sunday</h2>
+      <div class="day-section">
+        <h2>Saturday</h2>
+        <textarea id="saturday-entry" placeholder="How was your Day">
+          </textarea>
+        <button id="save-btn">Save</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="day-section">
+        <h2>Sunday</h2>
         <textarea id="sunday-entry" placeholder="How was your Day">
         </textarea>
         <button id="save-btn">Save</button>
-        </div>
       </div>
     </div>
-
-    <div class="mood-tracker">
-      <h9>Mood Tracker</h9>
-      <label>
-        <input type="radio" name="mood" value="happy">
-        Happy
-      </label>
-      <label>
-        <input type="radio" name="mood" value="mellow">
-        Mellow
-      </label>
-      <label>
-        <input type="radio" name="mood" value="stressed">
-        Stressed
-      </label>
-      <label>
-        <input type="radio" name="mood" value="sad">
-        Sad
-      </label>
-      <lable>
-        <input type="radio" name="mood" value="frustrated">
-        Frustrated
-      </lable>
-      <button id="submit-button">Submit</button>
-    </div>
-    
-    <div id="quote-box">
-      <h10>Inspirational Quote</h10>
-
-    </div>
-
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Thanks for your entry. Stay foxy!!</p>
-      <button class="delete" aria-label="close"></button>
-    </header>
-    <section id="modal-card-body">
-       Content ... -->
-    </section>
-    <footer class="modal-card-foot">
-
-    </footer>
   </div>
-</div>
-    
-    <script src=script.js></script>  
+
+  <div class="mood-tracker">
+    <h9>Mood Tracker</h9>
+    <label>
+      <input type="radio" name="mood" value="happy">
+      Happy
+    </label>
+    <label>
+      <input type="radio" name="mood" value="mellow">
+      Mellow
+    </label>
+    <label>
+      <input type="radio" name="mood" value="stressed">
+      Stressed
+    </label>
+    <label>
+      <input type="radio" name="mood" value="sad">
+      Sad
+    </label>
+    <lable>
+      <input type="radio" name="mood" value="frustrated">
+      Frustrated
+    </lable>
+    <button id="submit-button">Submit</button>
+  </div>
+
+  <div id="quote-box">
+    <h10>Inspirational Quote</h10>
+
+  </div>
+
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Thanks for your entry. Stay foxy!!</p>
+        <button class="delete" aria-label="close"></button>
+      </header>
+      <section id="modal-card-body">
+        Content ... -->
+      </section>
+      <footer class="modal-card-foot">
+
+      </footer>
+    </div>
+  </div>
+
+  <script src=script.js></script>
 </body>
 
 <!--
@@ -154,9 +151,4 @@
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
-
 -->
-
-
-
-

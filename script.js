@@ -3,25 +3,15 @@ const quoteContainer = document.getElementById("quote-box");
 const apiUrl = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 const popUp = document.getElementById("modal-card-body");
 
-// function getRandomQuote() {
-//   fetch(apiUrl)
-//     .then(response => response.json())
-//     .then(data => {
-//       quoteContainer.textContent = data.content;
-//     })
-//     .catch(error => {
-//       console.log('Error:', error);
-//     });
-// }
 
 function inspirationalQuote() {
   var getQuote = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 
   fetch(getQuote, {
-    headers: {
-      "X-Api-Key": "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO",
-    },
-  })
+      headers: {
+        "X-Api-Key": "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO",
+      },
+    })
     .then(function (response) {
       return response.json();
     })
@@ -57,7 +47,6 @@ function randomPicture() {
 
 randomPicture();
 
-generateBtn.addEventListener("click", getRandomQuote);
 
 //Weekly Journal Entries
 const mondayEntry = document.getElementById("monday-entry");
@@ -68,34 +57,74 @@ const fridayEntry = document.getElementById("friday-entry");
 const saturdayEntry = document.getElementById("saturday-entry");
 const sundayEntry = document.getElementById("sunday-entry");
 
-// Saving journal entries to localStorage
+// monday local storage
 mondayEntry.addEventListener("input", () => {
-  localStorage.setItem("mondayEntry", mondayEntry.value);
+  var mondayInputValue = mondayEntry.value;
+  localStorage.setItem("mondayEntry", mondayInputValue);
+  console.log(mondayInputValue);
 });
 
+mondayEntry.value = localStorage.getItem("mondayEntry");
+
+
+// tuesday local storage
 tuesdayEntry.addEventListener("input", () => {
-  localStorage.setItem("tuesdayEntry", tuesdayEntry.value);
+  var tuesdayInputValue = tuesdayEntry.value;
+  localStorage.setItem("tuesdayEntry", tuesdayInputValue);
+  console.log(tuesdayInputValue);
 });
 
-wednesdayEntry.addEventListener("input", () => {
-  localStorage.setItem("wednesdayEntry", wednesdayEntry.value);
+tuesdayEntry.value = localStorage.getItem("tuesdayEntry");
+
+
+// wednesday local storage
+wednesdayEntry.addEventListener("input", () => {           
+  var wednesdayInputValue = wednesdayEntry.value;
+  localStorage.setItem("wednesdayEntry", wednesdayInputValue);
+  console.log(wednesdayInputValue);
 });
 
-thursdayEntry.addEventListener("input", () => {
-  localStorage.setItem("thursdayEntry", thursdayEntry.value);
+wednesdayEntry.value = localStorage.getItem("wednesdayEntry");
+
+
+// thursday local storage
+thursdayEntry.addEventListener("input", () => {           
+  var thursdayInputValue = thursdayEntry.value;
+  localStorage.setItem("thursdayEntry", thursdayInputValue);
+  console.log(thursdayInputValue);
 });
 
-fridayEntry.addEventListener("input", () => {
-  localStorage.setItem("fridayEntry", fridayEntry.value);
+thursdayEntry.value = localStorage.getItem("thursdayEntry");
+
+
+// friday local storage
+fridayEntry.addEventListener("input", () => {           
+  var fridayInputValue = fridayEntry.value;
+  localStorage.setItem("fridayEntry", fridayInputValue);
+  console.log(fridayInputValue);
 });
 
-saturdayEntry.addEventListener("input", () => {
-  localStorage.setItem("saturdayEntry", saturdayEntry.value);
+fridayEntry.value = localStorage.getItem("fridayEntry");
+
+
+// saturday local storage
+saturdayEntry.addEventListener("input", () => {           
+  var saturdayInputValue = saturdayEntry.value;
+  localStorage.setItem("saturdayEntry", saturdayInputValue);
+  console.log(saturdayInputValue);
 });
 
-sundayEntry.addEventListener("input", () => {
-  localStorage.setItem("sundayEntry", sundayEntry.value);
+saturdayEntry.value = localStorage.getItem("saturdayEntry");
+
+
+// sunday local storage
+sundayEntry.addEventListener("input", () => {           
+  var sundayInputValue = sundayEntry.value;
+  localStorage.setItem("sundayEntry", sundayInputValue);
+  console.log(sundayInputValue);
 });
+
+sundayEntry.value = localStorage.getItem("sundayEntry");
 
 // Retrieve journal entries from localStorage and populate the textareas
 window.addEventListener("DOMContentLoaded", () => {
@@ -124,3 +153,8 @@ submitButton.addEventListener("click", () => {
     console.log("Please select a mood");
   }
 });
+
+
+
+
+
