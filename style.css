@@ -1,24 +1,72 @@
-textarea {
-    width: 400px;
-    height: 400px;
-    font: normal 14px verdana;
-    line-height: 25px;
-    padding: 2px 10px;
-    border: solid 2px #ddd;
-    background: url(https://i.stack.imgur.com/ynxjD.png) repeat-y;
-    background-color: rgb(36, 20, 0);
-    scrollbar-width: thin;
-    scrollbar-color: #4a0c0c #000;
-
+.navbar {
+    margin-bottom: 100px;
+    color-scheme: inherit ;
+    background-color:bisque;
+    background: linear-gradient(to bottom, bisque, #dddddd,grey);
 }
-h1 {
-    font-size: xx-large;
-    font-style: normal;
-    text-decoration-color: aquamarine;
+/* Sets some initial padding/margin to 0, and sets box-sizing to border-box */
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box; color:black
+  
+  }
+  
+  /* Defines the container with some padding and sets it to display flex */
+  .container {
+    margin-top: inherit;
+    padding: 20px;
     display: flex;
-}
+    flex-wrap: wrap; /* Allows wrapping */
+    justify-content: space-between; /* Spaced-out flex children */
 
-#monday-entry #tuesday-entry #wednesday-entry {
-    display: inline-block;
-    margin-right: 10px;
-}
+  }
+  
+  /* Define flex properties on the row */
+  .row {
+    width: 100%; /* Takes up all available width */
+    display: flex;
+    
+    
+    
+  }
+  
+  /* Defines properties of the day-section */
+  .day-section {
+    width: 30%; /* Roughly one third width minus some for gaps */
+    padding: 20px;
+    background-color: bisque;
+    border: 10px solid #dddddd; /* Border around sections */
+  }
+  
+  /* Makes day-section stack on smaller screens */
+  @media only screen and (max-width: 60px) {
+    .day-section {
+      width: 100%; /* Makes the day-section full width on small screens */
+      margin-bottom: 20px; /* Adds some vertical spacing between stacked sections */
+    }
+  }
+  
+  /* Defines textarea properties */
+  textarea {
+    width: 100%; /* Takes up all available width */
+    min-height: 200px; /* Minimum height */
+    padding: 10px; /* Padding inside textarea */
+    border: 1px solid #dddddd; /* Border around textarea */
+    resize:vertical; /* Allows the textarea to only be resizable vertically */
+    background: url(https://i.stack.imgur.com/ynxjD.png) repeat-y;
+  }
+  
+  h2 {
+    margin-bottom: 12px; /* Adds some space below the title */
+    font-size:large ;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+
+ 
+  
+  
