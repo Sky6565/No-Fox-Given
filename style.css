@@ -1,7 +1,6 @@
 .navbar {
-
     color-scheme: inherit ;
-    background-color:bisque;
+    background-color:rgb(236, 207, 171);
     background: linear-gradient(to bottom, bisque, #dddddd,grey);
 }
 /* Sets some initial padding/margin to 0, and sets box-sizing to border-box */
@@ -23,7 +22,13 @@
 
   }
   
-  
+   /* Makes day-section stack on smaller screens */ 
+   @media only screen and (max-width: 600px) { 
+    .day-section { 
+      width: 100%; /* Makes the day-section full width on small screens */ 
+      margin-bottom: 20px; /* Adds some vertical spacing between stacked sections */ 
+    } 
+  } 
   
   /* Defines properties of the day-section */
   .day-section {
@@ -34,13 +39,7 @@
     border: 10px solid #dddddd; /* Border around sections */
   }
 
-   /* Makes day-section stack on smaller screens */ 
-   @media only screen and (max-width: 600px) { 
-    .day-section { 
-      width: 100%; /* Makes the day-section full width on small screens */ 
-      margin-bottom: 20px; /* Adds some vertical spacing between stacked sections */ 
-    } 
-  } 
+  
   
   /* Defines textarea properties */
   textarea {
