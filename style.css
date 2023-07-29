@@ -1,7 +1,7 @@
 .navbar {
     color-scheme: inherit ;
-    background-color:rgb(236, 207, 171);
-    background: linear-gradient(to bottom, bisque, #dddddd,grey);
+    background-color:#AFEEEE;
+    background: linear-gradient(to bottom, #AFEEEE, #dddddd,);
 }
 /* Sets some initial padding/margin to 0, and sets box-sizing to border-box */
 * {
@@ -35,8 +35,8 @@
     width: 30%; /* Roughly one third width minus some for gaps */
     box-shadow: 15px 15px 15px black;
     padding: 15px;
-    background-color: bisque;
-    border: 10px solid #dddddd; /* Border around sections */
+    background-color: #FFDAB9;
+    border: 10px solid 	#FFFFFF; /* Border around sections */
   }
 
   
@@ -48,7 +48,7 @@
     padding: 10px; /* Padding inside textarea */
     border: 1px solid #dddddd; /* Border around textarea */
     resize:vertical; /* Allows the textarea to only be resizable vertically */
-    background: url(https://i.stack.imgur.com/ynxjD.png) repeat-y;
+    background: #FFFFF0;
   }
   
   h2 {
@@ -69,15 +69,15 @@
       padding: 10px;
       /* Padding inside textarea */
       border: 1px solid #dddddd;
-      /* Border around textarea */
+      /* Border around textarea
       resize: vertical;
       /* Allows the textarea to only be resizable vertically */
       background-color: whitesmoke;
       /* Roughly one third width minus some for gaps */
       box-shadow: 15px 15px 15px black;box-shadow: 15px 15px 15px black;
       background-position: 40em;
-      background-color:bisque;
-      border: 40px solid #dddddd;
+      background-color: #AFEEEE;
+      border: 40px solid #008B8B;
       justify-content:space-evenly;
        margin:auto;
   }
@@ -90,7 +90,7 @@
     padding: 3%; /* Padding inside textarea */
     border: 1px solid #0f0112; /* Border around textarea */
     resize: horizontal; /* Allows the textarea to only be resizable vertically */
-    background-color: rgb(102, 232, 232);
+    background-color: #F08080;
     font-size:large;
     
     
