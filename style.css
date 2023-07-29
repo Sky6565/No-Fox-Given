@@ -1,5 +1,5 @@
 .navbar {
-    margin-bottom: 100px;
+
     color-scheme: inherit ;
     background-color:bisque;
     background: linear-gradient(to bottom, bisque, #dddddd,grey);
@@ -13,28 +13,23 @@
   }
   
   /* Defines the container with some padding and sets it to display flex */
-  .container {
+  .columns {
     margin-top: inherit;
-    padding: 20px;
+    padding: 100px;
     display: flex;
     flex-wrap: wrap; /* Allows wrapping */
     justify-content: space-between; /* Spaced-out flex children */
+    box-shadow: 15px 15px 15px black;
 
   }
   
-  /* Define flex properties on the row */
-  .row {
-    width: 100%; /* Takes up all available width */
-    display: flex;
-    
-    
-    
-  }
+  
   
   /* Defines properties of the day-section */
   .day-section {
     width: 30%; /* Roughly one third width minus some for gaps */
-    padding: 20px;
+    box-shadow: 15px 15px 15px black;
+    padding: 15px;
     background-color: bisque;
     border: 10px solid #dddddd; /* Border around sections */
   }
@@ -64,6 +59,8 @@
     font-weight: bold;
     text-align: center;
   }
+
+ 
  
   #quote-box {
       width: 100%;
@@ -78,7 +75,7 @@
       /* Allows the textarea to only be resizable vertically */
       background-color: whitesmoke;
       /* Roughly one third width minus some for gaps */
-      padding: 10px;
+      box-shadow: 15px 15px 15px black;box-shadow: 15px 15px 15px black;
       background-position: 40em;
       background-color:bisque;
       border: 40px solid #dddddd;
@@ -87,26 +84,31 @@
   }
 
   .mood-tracker {
-    width: 50%; /* Takes up 50% of the available width */
-    height:300px;
+    height:400px;
     min-height:200px;/* Minimum height */
-    position:relative;
-    flex-shrink:initial;
-    right: 23%;  /* 23% away from the right edge (of parent container) */
-    top: 92%;  /* 92% away from the top edge (of parent container) */
-    box-shadow: 10px 10px 10px rgb(195, 132, 55);
+    flex-shrink:inherit;
+    box-shadow: 15px 15px 15px black;
     padding: 3%; /* Padding inside textarea */
     border: 1px solid #0f0112; /* Border around textarea */
     resize: horizontal; /* Allows the textarea to only be resizable vertically */
     background-color: rgb(102, 232, 232);
+    font-size:large;
+    
+    
    
   }
-  
- /* Makes day-section stack on smaller screens */
- @media only screen and (max-width: 60px) {
-  .day-section {
-    width: 100%; /* Makes the day-section full width on small screens */
-    margin-bottom: 20px; /* Adds some vertical spacing between stacked sections */
-    flex-direction: column;
-  }
-}  
+
+   ul {
+    
+    text-align: center;
+    font-size:larger;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+   }
+   
+
+    
+   
+
+   

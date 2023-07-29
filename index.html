@@ -43,85 +43,85 @@
   </nav>
 
 
-  <div class="container">
-    <div class="row">
-      <div class="day-section">
-        <h2>Monday</h2>
-        <textarea id="monday-entry" placeholder="How was your Day">
-          </textarea>
-        <button id="save-btn">Save</button>
-      </div>
-      <div class="day-section">
-        <h2>Tuesday</h2>
-        <textarea id="tuesday-entry" placeholder="How was your Day">
-          </textarea>
-        <button id="save-btn">Save</button>
-      </div>
-      <div class="day-section">
-        <h2>Wednesday</h2>
-        <textarea id="wednesday-entry" placeholder="How was your Day">
+  <div class="columns is-multiline is-mobile">
+    <div class="day-section column is-12-mobile is-4-desktop" >
+      <h2>Monday</h2>
+      <textarea id="monday-entry" placeholder="How was your Day">
         </textarea>
-        <button id="save-btn">Save</button>
-      </div>
+      <button id="save-btn">Save</button>
     </div>
-    <div class="row">
-      <div class="day-section">
-        <h2>Thursday</h2>
-        <textarea id="thursday-entry" placeholder="How was your Day">
+    <div class="day-section  column is-4">
+      <h2>Tuesday</h2>
+      <textarea id="tuesday-entry" placeholder="How was your Day">
         </textarea>
-        <button id="save-btn">Save</button>
-      </div>
-      <div class="day-section">
-        <h2>Friday</h2>
-        <textarea id="friday-entry" placeholder="How was your Day">
-        </textarea>
-        <button id="save-btn">Save</button>
-      </div>
-      <div class="day-section">
-        <h2>Saturday</h2>
-        <textarea id="saturday-entry" placeholder="How was your Day">
-          </textarea>
-        <button id="save-btn">Save</button>
-      </div>
+      <button id="save-btn">Save</button>
     </div>
-    <div class="row">
-      <div class="day-section">
-        <h2>Sunday</h2>
-        <textarea id="sunday-entry" placeholder="How was your Day">
+    <div class="day-section column is-4">
+      <h2>Wednesday</h2>
+      <textarea id="wednesday-entry" placeholder="How was your Day">
+      </textarea>
+      <button id="save-btn">Save</button>
+    </div>
+  
+  
+    <div class="day-section  column is-4">
+      <h2>Thursday</h2>
+      <textarea id="thursday-entry" placeholder="How was your Day">
+      </textarea>
+      <button id="save-btn">Save</button>
+    </div>
+    <div class="day-section  column is-4">
+      <h2>Friday</h2>
+      <textarea id="friday-entry" placeholder="How was your Day">
+      </textarea>
+      <button id="save-btn">Save</button>
+    </div>
+    <div class="day-section  column is-4">
+      <h2>Saturday</h2>
+      <textarea id="saturday-entry" placeholder="How was your Day">
         </textarea>
-        <button id="save-btn">Save</button>
-      </div>
+      <button id="save-btn">Save</button>
+    </div>
+  
+  
+    <div class="day-section column is-4">
+      <h2>Sunday</h2>
+      <textarea id="sunday-entry" placeholder="How was your Day">
+      </textarea>
+      <button id="save-btn">Save</button>
+    </div>
+    <div class="mood-tracker  column is-12-mobile is-8-desktop">
+      <ul>Mood Tracker</ul>
+      <label>
+        <p>Happy: &#128522;</p>
+        <input type="radio" name="mood" value="happy">
+      </label>
+      <label>
+        <p>Stressed: &#128555;</p>
+        <input type="radio" name="mood" value="mellow">
+      </label>
+      <label>
+        <p>Mellow: &#128524;</p>
+        <input type="radio" name="mood" value="stressed">
+      </label>
+      <label>
+        <p>sad: &#128542;</p>
+        <input type="radio" name="mood" value="sad">
+      </label>
+      <lable>
+        <p>frustrated:&#128548;</p>
+        <input type="radio" name="mood" value="frustrated"> 
+      </lable>
+      <ul>
+      <button id="submit-button"><strong>Submit</strong></button>
+    </ul>
     </div>
   </div>
 
-  <div class="mood-tracker">
-    <h9>Mood Tracker</h9>
-    <label>
-      <input type="radio" name="mood" value="happy">
-      Happy
-    </label>
-    <label>
-      <input type="radio" name="mood" value="mellow">
-      Mellow
-    </label>
-    <label>
-      <input type="radio" name="mood" value="stressed">
-      Stressed
-    </label>
-    <label>
-      <input type="radio" name="mood" value="sad">
-      Sad
-    </label>
-    <lable>
-      <input type="radio" name="mood" value="frustrated">
-      Frustrated
-    </lable>
-    <button id="submit-button">Submit</button>
-  </div>
+  
 
   <div id="quote-box">
     <h10>Inspirational Quote</h10>
-
   </div>
 
   <div class="modal">
