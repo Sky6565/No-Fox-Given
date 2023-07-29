@@ -2,6 +2,7 @@
     color-scheme: inherit ;
     background-color:#AFEEEE;
     background: linear-gradient(to bottom, #AFEEEE, #dddddd,);
+    
 }
 /* Sets some initial padding/margin to 0, and sets box-sizing to border-box */
 * {
@@ -35,7 +36,7 @@
     width: 30%; /* Roughly one third width minus some for gaps */
     box-shadow: 15px 15px 15px black;
     padding: 15px;
-    background-color: #FFDAB9;
+    background-color:#F4A460;
     border: 10px solid 	#FFFFFF; /* Border around sections */
   }
 
@@ -104,6 +105,10 @@
     font-style: italic;
     font-weight: bold;
     text-align: center;
+   }
+
+   h3 {
+    font-size: 75px;
    }
    
 
