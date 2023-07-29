@@ -48,19 +48,19 @@
       <h2>Monday</h2>
       <textarea id="monday-entry" placeholder="How was your Day">
         </textarea>
-      <button id="save-btn">Save</button>
+      <button id="monday-save-btn">Save</button>
     </div>
     <div class="day-section column is-4">
       <h2>Tuesday</h2>
       <textarea id="tuesday-entry" placeholder="How was your Day">
         </textarea>
-      <button id="save-btn">Save</button>
+      <button id="tuesday-save-btn">Save</button>
     </div>
     <div class="day-section column is-4">
       <h2>Wednesday</h2>
       <textarea id="wednesday-entry" placeholder="How was your Day">
       </textarea>
-      <button id="save-btn">Save</button>
+      <button id="wednesday-save-btn">Save</button>
     </div>
   
   
@@ -68,19 +68,19 @@
       <h2>Thursday</h2>
       <textarea id="thursday-entry" placeholder="How was your Day">
       </textarea>
-      <button id="save-btn">Save</button>
+      <button id="thursday-save-btn">Save</button>
     </div>
     <div class="day-section  column is-4">
       <h2>Friday</h2>
       <textarea id="friday-entry" placeholder="How was your Day">
       </textarea>
-      <button id="save-btn">Save</button>
+      <button id="friday-save-btn">Save</button>
     </div>
     <div class="day-section  column is-4">
       <h2>Saturday</h2>
       <textarea id="saturday-entry" placeholder="How was your Day">
         </textarea>
-      <button id="save-btn">Save</button>
+      <button id="saturday-save-btn">Save</button>
     </div>
   
   
@@ -88,7 +88,7 @@
       <h2>Sunday</h2>
       <textarea id="sunday-entry" placeholder="How was your Day">
       </textarea>
-      <button id="save-btn">Save</button>
+      <button id="sunday-save-btn">Save</button>
     </div>
     <div class="mood-tracker  column is-12-mobile is-8-desktop">
       <ul>Mood Tracker</ul>
@@ -129,10 +129,10 @@
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title">Thanks for your entry. Stay foxy!!</p>
-        <button class="delete" aria-label="close"></button>
+        <button id="close-modal-btn" class="delete pop-up-close-btn" aria-label="close"></button>
       </header>
       <section id="modal-card-body">
-        Content ...
+        <div id="modal-image"></div>
       </section>
       <footer class="modal-card-foot">
 
@@ -140,8 +140,16 @@
     </div>
   </div>
 
+  <div>
+    <button id="clear-btn">Clear</button>
+  </div>
+
   <script src=script.js></script>
 </body>
+
+
+<!-- Don't Delete Yet ============================================== -->
+
 
 <!--
 <div class="modal">
@@ -154,3 +162,4 @@
   <button class="modal-close is-large" aria-label="close"></button>
 </div>
 -->
+
