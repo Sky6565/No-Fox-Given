@@ -45,7 +45,6 @@ function inspirationalQuote() {
       var quoteData = data[0].quote;
       var randomQuote = document.createElement("span");
       randomQuote.textContent = quoteData;
-      quoteContainer.innerHTML = "";
       quoteContainer.appendChild(randomQuote);
     });
 }
@@ -87,7 +86,7 @@ tuesdaySaveBtn.addEventListener("click", () => {
   console.log(tuesdayInputValue);
 });
 
-wednesdaySaveBtn.addEventListener("click", () => {           
+wednesdaySaveBtn.addEventListener("click", () => {
   var wednesdayInputValue = wednesdayEntry.value;
   localStorage.setItem("wednesdayEntry", wednesdayInputValue);
   randomPicture();
@@ -95,7 +94,7 @@ wednesdaySaveBtn.addEventListener("click", () => {
   console.log(wednesdayInputValue);
 });
 
-thursdaySaveBtn.addEventListener("click", () => {           
+thursdaySaveBtn.addEventListener("click", () => {
   var thursdayInputValue = thursdayEntry.value;
   localStorage.setItem("thursdayEntry", thursdayInputValue);
   randomPicture();
@@ -103,7 +102,7 @@ thursdaySaveBtn.addEventListener("click", () => {
   console.log(thursdayInputValue);
 });
 
-fridaySaveBtn.addEventListener("click", () => {           
+fridaySaveBtn.addEventListener("click", () => {
   var fridayInputValue = fridayEntry.value;
   localStorage.setItem("fridayEntry", fridayInputValue);
   randomPicture();
@@ -111,7 +110,7 @@ fridaySaveBtn.addEventListener("click", () => {
   console.log(fridayInputValue);
 });
 
-saturdaySaveBtn.addEventListener("click", () => {           
+saturdaySaveBtn.addEventListener("click", () => {
   var saturdayInputValue = saturdayEntry.value;
   localStorage.setItem("saturdayEntry", saturdayInputValue);
   randomPicture();
@@ -119,7 +118,7 @@ saturdaySaveBtn.addEventListener("click", () => {
   console.log(saturdayInputValue);
 });
 
-sundaySaveBtn.addEventListener("click", () => {           
+sundaySaveBtn.addEventListener("click", () => {
   var sundayInputValue = sundayEntry.value;
   localStorage.setItem("sundayEntry", sundayInputValue);
   randomPicture();
@@ -130,26 +129,26 @@ sundaySaveBtn.addEventListener("click", () => {
 // Function to clear all journal entries
 function clearText() {
   mondayEntry.value = '';
-  tuesdayEntry.value = ''; 
-  wednesdayEntry.value = ''; 
+  tuesdayEntry.value = '';
+  wednesdayEntry.value = '';
   thursdayEntry.value = '';
   fridayEntry.value = '';
-  saturdayEntry.value = ''; 
+  saturdayEntry.value = '';
   sundayEntry.value = '';
 };
 
 // Clears journal entries from local storage
-clearBtn.addEventListener("click", function() {           
+clearBtn.addEventListener("click", function () {
   clearText();
   localStorage.clear();
 });
 
-closeModalBtn.addEventListener("click", function() {           
+closeModalBtn.addEventListener("click", function () {
   popUp.classList.remove("is-active");
   const firstImage = modalImage.querySelector("img:first-child");
   modalImage.removeChild(firstImage);
 });
- 
+
 
 // Retrieves the user's journal entries from local storage
 mondayEntry.value = localStorage.getItem("mondayEntry");

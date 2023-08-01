@@ -16,13 +16,22 @@ Mood tracker to visually represent the selected mood
 
 ## User Story
 
+``````
 As a creative person I would like to keep a record of my daily thoughts, activities and moods, then get a motivational quote and inspirational music after I click save.
+``````
 
-## Acceptance criteria
+## Acceptance Criteria
 
+``````
 Given I am using a daily journal
 When I open the journal
 Then I am presented with a writing space of each day of the week
 When I click into each writing space
 Then I can write my thoughts or events
 When I click save I am presented with random interesting pictures
+``````
+
+## Project Mock-Up
+
+![shot_01](assets/images/finalProjectShot01.jpg)
+![shot_02](assets/images/finalProjectShot02.jpg)
