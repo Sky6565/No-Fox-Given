@@ -178,6 +178,25 @@ submitButton.addEventListener("click", () => {
   }
 });
 
+/// Function for getting the current time and date
+function getCurrentTime() {
+  var today = new Date();
+  var time = today.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+  var date = today.toLocaleDateString();
+  // Display the current time and date in the HTML element with id "current-time"
+  document.getElementById("current-time").innerHTML =
+    "Today is " + date + " , " + time;
+}
+// Set up the interval to call the getCurrentTime function every minute
+// Call the function once to display the time immediately when the page loads
+getCurrentTime();
+setInterval(getCurrentTime, 60000);
+
+
+
 
 // Don't Delete Yet ==============================================
 
