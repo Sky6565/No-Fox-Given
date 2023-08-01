@@ -81,6 +81,8 @@
       border: 40px solid #008B8B;
       justify-content:space-evenly;
        margin:auto;
+      text-align: center;
+      font-size: 20px;
   }
 
   .mood-tracker {
@@ -94,8 +96,6 @@
     background-color: #F08080;
     font-size:large;
     
-    
-   
   }
 
    ul {
@@ -109,6 +109,12 @@
 
    h3 {
     font-size: 75px;
+   }
+
+   h1 {
+    font-size: 20px;
+    text-align: center;
+
    }
    
 
