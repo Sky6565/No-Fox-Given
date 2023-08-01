@@ -19,7 +19,7 @@
     display: flex;
     flex-wrap: wrap; /* Allows wrapping */
     justify-content: space-between; /* Spaced-out flex children */
-    box-shadow: 15px 15px 15px black;
+    /* box-shadow: 15px 15px 15px grey; */
 
   }
   
@@ -34,7 +34,7 @@
   /* Defines properties of the day-section */
   .day-section {
     width: 30%; /* Roughly one third width minus some for gaps */
-    box-shadow: 15px 15px 15px black;
+    box-shadow: 15px 15px 15px grey;
     padding: 15px;
     background-color:#F4A460;
     border: 10px solid 	#FFFFFF; /* Border around sections */
@@ -75,7 +75,7 @@
       /* Allows the textarea to only be resizable vertically */
       background-color: whitesmoke;
       /* Roughly one third width minus some for gaps */
-      box-shadow: 15px 15px 15px black;box-shadow: 15px 15px 15px black;
+      box-shadow: 15px 15px 15px grey;box-shadow: 15px 15px 15px grey;
       background-position: 40em;
       background-color: #AFEEEE;
       border: 40px solid #008B8B;
@@ -87,7 +87,7 @@
     height:400px;
     min-height:200px;/* Minimum height */
     flex-shrink:inherit;
-    box-shadow: 15px 15px 15px black;
+    box-shadow: 15px 15px 15px grey;
     padding: 3%; /* Padding inside textarea */
     border: 1px solid #0f0112; /* Border around textarea */
     resize: horizontal; /* Allows the textarea to only be resizable vertically */
