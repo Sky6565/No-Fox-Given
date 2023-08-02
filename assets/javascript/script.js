@@ -29,14 +29,13 @@ const closeModalBtn = document.getElementById("close-modal-btn");
 var getQuote = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
 var randomFoxApi = "https://randomfox.ca/floof";
 
-// [API-Example01] Function for generating a random inspirational quote on page load. 
+// [API-Example01] Function for generating a random inspirational quote on page load.
 function inspirationalQuote() {
-
   fetch(getQuote, {
-      headers: {
-        "X-Api-Key": "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO",
-      },
-    })
+    headers: {
+      "X-Api-Key": "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO",
+    },
+  })
     .then(function (response) {
       return response.json();
     })
@@ -51,8 +50,7 @@ function inspirationalQuote() {
 
 inspirationalQuote();
 
-
-// [API-Example02] Function for generating a random fox image when the user submits a journal entry.  
+// [API-Example02] Function for generating a random fox image when the user submits a journal entry.
 function randomPicture() {
   fetch(randomFoxApi)
     .then(function (response) {
@@ -67,7 +65,6 @@ function randomPicture() {
       modalImage.appendChild(randomFoxImage);
     });
 }
-
 
 // Logs user journal entries to local storage
 mondaySaveBtn.addEventListener("click", () => {
@@ -128,14 +125,14 @@ sundaySaveBtn.addEventListener("click", () => {
 
 // Function to clear all journal entries
 function clearText() {
-  mondayEntry.value = '';
-  tuesdayEntry.value = '';
-  wednesdayEntry.value = '';
-  thursdayEntry.value = '';
-  fridayEntry.value = '';
-  saturdayEntry.value = '';
-  sundayEntry.value = '';
-};
+  mondayEntry.value = "";
+  tuesdayEntry.value = "";
+  wednesdayEntry.value = "";
+  thursdayEntry.value = "";
+  fridayEntry.value = "";
+  saturdayEntry.value = "";
+  sundayEntry.value = "";
+}
 
 // Clears journal entries from local storage
 clearBtn.addEventListener("click", function () {
@@ -149,7 +146,6 @@ closeModalBtn.addEventListener("click", function () {
   modalImage.removeChild(firstImage);
 });
 
-
 // Retrieves the user's journal entries from local storage
 mondayEntry.value = localStorage.getItem("mondayEntry");
 tuesdayEntry.value = localStorage.getItem("tuesdayEntry");
@@ -158,7 +154,6 @@ thursdayEntry.value = localStorage.getItem("thursdayEntry");
 fridayEntry.value = localStorage.getItem("fridayEntry");
 saturdayEntry.value = localStorage.getItem("saturdayEntry");
 sundayEntry.value = localStorage.getItem("sundayEntry");
-
 
 // Mood Button
 const moodRadioButtons = document.querySelectorAll('input[type="radio"]');
@@ -189,13 +184,25 @@ function getCurrentTime() {
   document.getElementById("current-time").innerHTML =
     "Today is " + date + " , " + time;
 }
-// Set up the interval to call the getCurrentTime function every minute
 // Call the function once to display the time immediately when the page loads
 getCurrentTime();
+
+// Set up the interval to call the getCurrentTime function every minute
 setInterval(getCurrentTime, 60000);
 
+var infoButton = document.getElementById("info-btn");
+var newParagraph = document.getElementById("new-paragraph");
 
-
+infoButton.addEventListener("click", function () {
+  if (
+    newParagraph.style.display === "none" ||
+    newParagraph.style.display === ""
+  ) {
+    newParagraph.style.display = "block";
+  } else {
+    newParagraph.style.display = "none";
+  }
+});
 
 // Don't Delete Yet ==============================================
 
