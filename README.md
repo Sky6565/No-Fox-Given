@@ -1,18 +1,18 @@
-# project1
+# **No Fox Given** // Group Project 01
 
-Daily Journal
+**No Fox Given** is an online journal application that allows for users to write daily journal entries and keep track of their moods throughout the day. 
 
-# project1
-
-This project is a daily journal application that allows users to write journal entries, track their mood, and receive a random quote. It uses an API to fetch random quotes and displays them to the user after they save their journal entry. Additionally, it includes a mood tracker that visually represents the user's selected mood using emojis for Sad, frustration, happy and mellow.
+The journal uses two third-party APIs to fetch and display inspirational quotes and pictures of adorable foxes that are then displayed to the user as they interact with the web app.  Additionally, the journal also features a mood tracker for users to utilze in order to visually represent their current mood using emojis.
 
 ## Features
 
-Input cards for every day of the week for writing journal entries
-Select emojis that represents your mood for the day
-Save button to save the journal entry and mood
-Random quote API integration to display a quote after saving
-Mood tracker to visually represent the selected mood
+* Input cards for every day of the week for writing journal entries.
+* Save button to save the journal entry.
+* Random quote API integration to display a quote.
+* Random fox image API integration to display a random image of a fox. 
+* Mood tracker to visually represent the selected mood.
+* Info button displays some brief documentation for the journal.
+* Clear Entries button displays will clear all journal entries at once for the user.
 
 ## User Story
 
@@ -28,11 +28,13 @@ When I open the journal
 Then I am presented with a writing space of each day of the week
 When I click into each writing space
 Then I can write my thoughts or events
-When I click save I am presented with random interesting pictures
-
+When I click save on a journal entry
+Then I am presented with a picture of an adorable fox
+When I select and submit my mood in the mood tracker
+Then I am presented with a message addressing my current mood. 
 ```
 
-## Project Mock-Up
+## Mock-Up
 
 ![shot_01](assets/images/finalProjectShot01.jpg)
 ![shot_02](assets/images/finalProjectShot02.jpg)

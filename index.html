@@ -10,43 +10,53 @@
 </head>
 
 <body>
+
+  <!-- Navigation Bar -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
 
+    <!-- Brand Name -->
     <header class="box" style=" width: 200px">
       <h1 class="title"><strong>No Fox Given</strong></h1>
     </header>
 
+    <!-- Hamburger Menu -->
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
-    </div>
+
+    <!-- Brand Logo -->
     <div class="navbar-end">
       <div>
         <h3>&#129418;</h3>
       </div>
       <div class="navbar-item">
         <div class="buttons">
+
+          <!-- Info Button -->
           <a class="button">
             <strong id="info-btn">Info</strong>
-
           </a>
+
+          <!-- Clear Journal Entries Button -->
           <a class="button">
             <strong id="clear-btn">Clear Entries</strong>
           </a>
         </div>
       </div>
     </div>
-    </div>
-  </nav>
   </nav>
 
+  <!-- Info Button Content -->
   <article class="message is-primary" id="new-paragraph" style="display: none;">
+      
+    <!-- Info Button Content Header -->
     <div class="message-header">
       <p>Welcome to No Fox Given Journal</p>
-
     </div>
+
+    <!-- Info Button Content Body -->
     <div class="message-body">
       Below there is entry forms that displays the days of the week.<b>Click</b> on where it says "How was your day"
       write your journal entry
@@ -67,44 +77,49 @@
 
   </article>
 
+  <!-- Current Time/Date -->
   <div class="Date-Time">
     <h1 id="current-time"></h1>
   </div>
 
-
+  <!-- Journal Entries Fields -->
   <div class="columns is-multiline is-mobile">
+    
     <div class="day-section column is-12-mobile is-4-desktop">
       <h2>Monday</h2>
       <textarea id="monday-entry" placeholder="How was your Day">
         </textarea>
       <button id="monday-save-btn">Save</button>
     </div>
+    
     <div class="day-section column is-4">
       <h2>Tuesday</h2>
       <textarea id="tuesday-entry" placeholder="How was your Day">
         </textarea>
       <button id="tuesday-save-btn">Save</button>
     </div>
+    
     <div class="day-section column is-4">
       <h2>Wednesday</h2>
       <textarea id="wednesday-entry" placeholder="How was your Day">
       </textarea>
       <button id="wednesday-save-btn">Save</button>
     </div>
-
-
+    
     <div class="day-section  column is-4">
       <h2>Thursday</h2>
       <textarea id="thursday-entry" placeholder="How was your Day">
       </textarea>
       <button id="thursday-save-btn">Save</button>
     </div>
+    
     <div class="day-section  column is-4">
       <h2>Friday</h2>
       <textarea id="friday-entry" placeholder="How was your Day">
       </textarea>
       <button id="friday-save-btn">Save</button>
     </div>
+    
     <div class="day-section  column is-4">
       <h2>Saturday</h2>
       <textarea id="saturday-entry" placeholder="How was your Day">
@@ -119,6 +134,7 @@
       <button id="sunday-save-btn">Save</button>
     </div>
 
+    <!-- Mood Tracker -->
     <div class="mood-tracker  column is-12-mobile is-8-desktop">
       <h2>Mood Tracker</h2>
       <form id="mood-tracker-form">
@@ -142,11 +158,12 @@
     </div>
   </div>
 
- 
+  <!-- Inspirational Quote Section -->
   <div id="quote-box">
     <h2>Inspirational Quote of the Day:</h2>
   </div>
 
+  <!-- Pop-Up Modal -->
   <div class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
@@ -158,15 +175,10 @@
         <div id="modal-image"></div>
         <div id="modal-text"></div>
       </section>
-      
       <footer class="modal-card-foot">
 
       </footer>
     </div>
-  </div>
-
-  <div>
-
   </div>
 
   <script src="./assets/javascript/script.js"></script>

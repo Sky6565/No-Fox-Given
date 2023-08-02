@@ -7,8 +7,6 @@ const modalImage = document.getElementById("modal-image");
 const modalText = document.getElementById("modal-text");
 const modalCardTitle = document.querySelector('.modal-card-title');
 
-
-
 // Dom Hooks for text fields
 const mondayEntry = document.getElementById("monday-entry");
 const tuesdayEntry = document.getElementById("tuesday-entry");
@@ -30,6 +28,11 @@ const sundaySaveBtn = document.getElementById("sunday-save-btn");
 const clearBtn = document.getElementById("clear-btn");
 
 const closeModalBtn = document.getElementById("close-modal-btn");
+
+const moodRadioButtons = document.querySelectorAll('input[type="radio"]');
+const moodSubmitButton = document.getElementById("mood-submit-button");
+const moodTrackerForm = document.getElementById("mood-tracker-form");
+const selectedMood = document.querySelector('input[name="mood"]:checked');
 
 const happyRadioBtn = document.getElementById("happy-radio-button");
 const stressedRadioBtn = document.getElementById("stressed-radio-button");
@@ -167,12 +170,7 @@ fridayEntry.value = localStorage.getItem("fridayEntry");
 saturdayEntry.value = localStorage.getItem("saturdayEntry");
 sundayEntry.value = localStorage.getItem("sundayEntry");
 
-// Mood Buttons
-const moodRadioButtons = document.querySelectorAll('input[type="radio"]');
-const moodSubmitButton = document.getElementById("mood-submit-button");
-const moodTrackerForm = document.getElementById("mood-tracker-form");
-const selectedMood = document.querySelector('input[name="mood"]:checked');
-
+// Mood Tracker Submit Event 
 moodTrackerForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
