@@ -73,7 +73,13 @@ h2 {
   text-align: center;
 }
 
-
+#modal-text {
+  background-color: #FFFFFF;
+  height: 20rem;
+  width: auto;
+  text-align: center;
+  padding: 5rem 8rem 0 8rem;
+}
 
 #quote-box {
   width: 100%;

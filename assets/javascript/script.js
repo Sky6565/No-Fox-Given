@@ -4,6 +4,10 @@ const popUpContent = document.getElementById("modal-card-body");
 const popUp = document.querySelector(".modal");
 const popUpCloseBtn = document.querySelector(".pop-up-btn");
 const modalImage = document.getElementById("modal-image");
+const modalText = document.getElementById("modal-text");
+const modalCardTitle = document.querySelector('.modal-card-title');
+
+
 
 // Dom Hooks for text fields
 const mondayEntry = document.getElementById("monday-entry");
@@ -22,8 +26,16 @@ const thursdaySaveBtn = document.getElementById("thursday-save-btn");
 const fridaySaveBtn = document.getElementById("friday-save-btn");
 const saturdaySaveBtn = document.getElementById("saturday-save-btn");
 const sundaySaveBtn = document.getElementById("sunday-save-btn");
+
 const clearBtn = document.getElementById("clear-btn");
+
 const closeModalBtn = document.getElementById("close-modal-btn");
+
+const happyRadioBtn = document.getElementById("happy-radio-button");
+const stressedRadioBtn = document.getElementById("stressed-radio-button");
+const mellowRadioBtn = document.getElementById("mellow-radio-button");
+const sadRadioBtn = document.getElementById("sad-radio-button");
+const frustratedRadioBtn = document.getElementById("frustrated-radio-button");
 
 // API URLs
 var getQuote = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
@@ -32,10 +44,10 @@ var randomFoxApi = "https://randomfox.ca/floof";
 // [API-Example01] Function for generating a random inspirational quote on page load.
 function inspirationalQuote() {
   fetch(getQuote, {
-    headers: {
-      "X-Api-Key": "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO",
-    },
-  })
+      headers: {
+        "X-Api-Key": "nLVfqWBdJ/zrBvVXZNO0tA==arT9IvkXmI80V3yO",
+      },
+    })
     .then(function (response) {
       return response.json();
     })
@@ -155,22 +167,65 @@ fridayEntry.value = localStorage.getItem("fridayEntry");
 saturdayEntry.value = localStorage.getItem("saturdayEntry");
 sundayEntry.value = localStorage.getItem("sundayEntry");
 
-// Mood Button
+// Mood Buttons
 const moodRadioButtons = document.querySelectorAll('input[type="radio"]');
-const submitButton = document.getElementById("submit-button");
+const moodSubmitButton = document.getElementById("mood-submit-button");
+const moodTrackerForm = document.getElementById("mood-tracker-form");
+const selectedMood = document.querySelector('input[name="mood"]:checked');
 
-// Mood Event listeners
-submitButton.addEventListener("click", () => {
-  const selectedMood = document.querySelector('input[name="mood"]:checked');
+moodTrackerForm.addEventListener("submit", function (event) {
+  event.preventDefault();
 
-  if (selectedMood) {
-    const moodValue = selectedMood.value;
-    // Save the mood value or perform desired actions
-    console.log(`Selected mood: ${moodValue}`);
+  if (happyRadioBtn.checked) {
+    modalCardTitle.innerHTML = "";
+    modalText.innerHTML = "";
+    var happyMessage = document.createElement("span");
+    happyMessage.textContent = "Glad you're having a good day!";
+    modalText.appendChild(happyMessage);
+    popUp.classList.add("is-active");
+
+  } else if (stressedRadioBtn.checked) {
+    modalCardTitle.innerHTML = "";
+    modalText.innerHTML = "";
+    var stressedMessage = document.createElement("span");
+    stressedMessage.textContent = "Sorry to hear that you're feeling stressed! Hope things get better with some rest.";
+    modalText.appendChild(stressedMessage);
+    popUp.classList.add("is-active");
+
+  } else if (mellowRadioBtn.checked) {
+    modalCardTitle.innerHTML = "";
+    modalText.innerHTML = "";
+    var mellowMessage = document.createElement("span");
+    mellowMessage.textContent = "Glad you're feeling mellow!";
+    modalText.appendChild(mellowMessage);
+    popUp.classList.add("is-active");
+
+  } else if (sadRadioBtn.checked) {
+    modalCardTitle.innerHTML = "";
+    modalText.innerHTML = "";
+    var sadMessage = document.createElement("span");
+    sadMessage.textContent = "Sorry to hear that you're feeling sad. Know that this feeling will eventually pass and that things will get better!";
+    modalText.appendChild(sadMessage);
+    popUp.classList.add("is-active");
+
+  } else if (frustratedRadioBtn.checked) {
+    modalCardTitle.innerHTML = "";
+    modalText.innerHTML = "";
+    var frustratedMessage = document.createElement("span");
+    frustratedMessage.textContent = "Sorry to hear that you're feeling frustrated! Taking a couple of deep breaths and resting usually helps makes things a little better!";
+    modalText.appendChild(frustratedMessage);
+    popUp.classList.add("is-active");
+
   } else {
-    console.log("Please select a mood");
-  }
+    modalCardTitle.innerHTML = "";
+    modalText.innerHTML = "";
+    var nullMessage = document.createElement("span");
+    nullMessage.textContent = "Please select a mood!";
+    modalText.appendChild(nullMessage);
+    popUp.classList.add("is-active");
+  };
 });
+
 
 /// Function for getting the current time and date
 function getCurrentTime() {

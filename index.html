@@ -30,7 +30,7 @@
         <div class="buttons">
           <a class="button">
             <strong id="info-btn">Info</strong>
-            
+
           </a>
           <a class="button">
             <strong id="clear-btn">Clear Entries</strong>
@@ -43,26 +43,29 @@
   </nav>
 
   <article class="message is-primary" id="new-paragraph" style="display: none;">
-  <div class="message-header">
-    <p>Welcome to No Fox Given Journal</p>
-    
-  </div>
-  <div class="message-body">
-    Below there is entry forms that displays the days of the week.<b>Click</b> on where it says "How was your day"  write your journal entry
-    <br/>
-    Once you are done writing your entry you can save the contents by clicking the <b>Save</b> button.
-    Then a random fox picture will pop up, we hope that brightens your day, click on the <b>X</b> button to exit from the picture
-    <br />
-    When you scroll down next to Sunday is a mood tracker and you can click on any icon to document your mood of the day
-    <br />
-    There is a section that provides you with a motivational quote and when you refresh the page a new one appears.
-    <br />
-    Finally, you can clear your entries by clicking the <b>Clear Entries</b> button
-    <br />
-    Now click the <b>Info</b> button to exit from this section
-  </div>
+    <div class="message-header">
+      <p>Welcome to No Fox Given Journal</p>
 
-</article>
+    </div>
+    <div class="message-body">
+      Below there is entry forms that displays the days of the week.<b>Click</b> on where it says "How was your day"
+      write your journal entry
+      <br />
+      Once you are done writing your entry you can save the contents by clicking the <b>Save</b> button.
+      Then a random fox picture will pop up, we hope that brightens your day, click on the <b>X</b> button to exit from
+      the picture
+      <br />
+      When you scroll down next to Sunday is a mood tracker and you can click on any icon to document your mood of the
+      day
+      <br />
+      There is a section that provides you with a motivational quote and when you refresh the page a new one appears.
+      <br />
+      Finally, you can clear your entries by clicking the <b>Clear Entries</b> button
+      <br />
+      Now click the <b>Info</b> button to exit from this section
+    </div>
+
+  </article>
 
   <div class="Date-Time">
     <h1 id="current-time"></h1>
@@ -109,8 +112,82 @@
       <button id="saturday-save-btn">Save</button>
     </div>
 
-
     <div class="day-section column is-4">
+      <h2>Sunday</h2>
+      <textarea id="sunday-entry" placeholder="How was your Day">
+      </textarea>
+      <button id="sunday-save-btn">Save</button>
+    </div>
+
+    <div class="mood-tracker  column is-12-mobile is-8-desktop">
+      <h2>Mood Tracker</h2>
+      <form id="mood-tracker-form">
+        <input type="radio" name="mood" id="happy-radio-button" value="happy">
+        <label for="happy">Happy &#128522;</label>
+        <br>
+        <input type="radio" name="mood" id="stressed-radio-button" value="stressed">
+        <label for="stressed">Stressed &#128555;</label>
+        <br>
+        <input type="radio" name="mood" id="mellow-radio-button" value="mellow">
+        <label for="mellow">Mellow &#128524;</label>
+        <br>
+        <input type="radio" name="mood" id="sad-radio-button" value="sad">
+        <label for="sad">Sad &#128542;</label>
+        <br>
+        <input type="radio" name="mood" id="frustrated-radio-button" value="frustrated">
+        <label for="frustrated">Frustrated &#128548;</label>
+        <br>
+        <button id="mood-submit-button"><strong>Submit</strong></button>
+      </form>
+    </div>
+  </div>
+
+ 
+  <div id="quote-box">
+    <h2>Inspirational Quote of the Day:</h2>
+  </div>
+
+  <div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Thanks for your entry. Stay foxy!!</p>
+        <button id="close-modal-btn" class="delete pop-up-close-btn" aria-label="close"></button>
+      </header>
+      <section id="modal-card-body">
+        <div id="modal-image"></div>
+        <div id="modal-text"></div>
+      </section>
+      
+      <footer class="modal-card-foot">
+
+      </footer>
+    </div>
+  </div>
+
+  <div>
+
+  </div>
+
+  <script src="./assets/javascript/script.js"></script>
+</body>
+
+
+<!-- Don't Delete Yet ============================================== 
+
+
+<div class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    <p class="image is-4by3">
+      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
+    </p>
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+
+ <div class="day-section column is-4">
       <h2>Sunday</h2>
       <textarea id="sunday-entry" placeholder="How was your Day">
       </textarea>
@@ -143,48 +220,3 @@
       </ul>
     </div>
   </div>
-
-
-
-  <div id="quote-box">
-    <h2>Inspirational Quote of the Day:</h2>
-  </div>
-
-  <div class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-      <header class="modal-card-head">
-        <p class="modal-card-title">Thanks for your entry. Stay foxy!!</p>
-        <button id="close-modal-btn" class="delete pop-up-close-btn" aria-label="close"></button>
-      </header>
-      <section id="modal-card-body">
-        <div id="modal-image"></div>
-      </section>
-      <footer class="modal-card-foot">
-
-      </footer>
-    </div>
-  </div>
-
-  <div>
-
-  </div>
-
-  <script src="./assets/javascript/script.js"></script>
-</body>
-
-
-<!-- Don't Delete Yet ============================================== -->
-
-
-<!--
-<div class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    <p class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="">
-    </p>
-  </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
--->
